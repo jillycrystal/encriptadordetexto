@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #e6ebf0;
+    color: #3b5161;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.header {
+    width: 100%;
+    height: 60px; /* Altura ajustable */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background-color: transparent; /* Fondo transparente*/
+    padding: 10px 0;
+    position: fixed; /* Header fijo */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Logo arriba siempre */
+}
+
+.logo {
+    width: 128px;
+    height: 48px;
+}
+
+.container{
+    display: flex;
+    overflow: hidden;
+    width:60%;
+}
+
+
+/* Media Queries*/
+
+@media screen and (max-width: 900px) {
+    .container{
+        display: flex;
+        overflow: hidden;
+        width:90%;
+    }
+
+}
+
+
+@media screen and (max-width: 756px) {
+    .container{
+        display: flex;
+        width:90%;
+        flex-direction: column;
+    }
+    .panel-izquierdo {
+        width: 90%!important;
+        height: 40vh!important;
+    }
+    .panel-derecho {
+        width: 90%!important;
+        height: 30vh!important;
+
+    }
+    .panel-derecho img {
+    display: none;
+    }   
+
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .container{
+        display: flex;
+        width:90%;
+        flex-direction: column;
+    }
+    .panel-izquierdo {
+        width: 90%!important;
+        height: 40vh!important;
+    }
+    .panel-derecho {
+        width: 90%!important;
+        height: 30vh!important;
+
+    }
+    .panel-derecho img {
+    display: none;
+    }   
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #boton-encriptar, #boton-desencriptar {
+        width: 100% !important;;
+    }
+
+}
+
+
+.container-2{
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+
+.panel-izquierdo, .panel-derecho {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+
+}
+
+.panel-izquierdo {
+    width: 60%;
+}
+
+.panel-derecho {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap:10px;
+
+}
+
+textarea {
+    width: 100%;
+    flex-grow: 1;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Inter", sans-serif;
+    outline: none;
+
+}
+
+
+.panel-izquierdo textarea{
+    font-size: 32px;
+    color:#0A3871;
+}
+
+
+
+.panel-derecho textarea{
+    font-size: 24px;
+    color:gray-400;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    font-family: "Inter", sans-serif;
+
+}
+
+#boton-encriptar {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    width: 48%;
+}
+
+#boton-desencriptar {
+    background-color: #ffffff;
+    color: #1e3a8a;
+    border: 1px solid #1e3a8a;
+    width: 48%;
+
+}
+
+#boton-copiar {
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #1e3a8a;
+    border: 1px solid #1e3a8a;
+    width: 80%;
+
+}
+
+button:hover {
+    background-color: #3b5161;
+    color: #ffffff;
+}
+
+#copy-btn:hover {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 10px;
+    color: gray-400;
+    margin-top: 10px;
+}
+
+.warning-icon {
+    margin-right: 8px; 
+    width: 16px;
+    height: 16px; 
+}
+
+.panel-derecho p{
+    color:gray-500;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.panel-derecho span{
+    color:gray-400;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.panel-derecho textarea,
+.panel-derecho button {
+    display: none;
+}
+
+
+.panel-derecho.hide-image-text img,
+.panel-derecho.hide-image-text p,
+.panel-derecho.hide-image-text span {
+    display: none;
+}
+
+.panel-derecho.show-textarea-button textarea,
+.panel-derecho.show-textarea-button button {
+    display: block;
+}
+
+.footer {
+    width: 100%;
+    height: 20px; /* Altura ajustable */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px;
+    position: fixed; /* Mantiene el footer en la parte inferior de la página */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+    font-size: 14px;
+    color: gray-400; }

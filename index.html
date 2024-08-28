@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/alura-logo.png" alt="Logo Alura" class="logo">
+    </header>
+    <div class="container">
+        <div class="panel-izquierdo">
+            <textarea id="ingreso-de-texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="warning">
+                <img src="./assets/bi_exclamation-circle-fill.png" alt="warning icon" class="warning-icon">Solo letras minúsculas y sin acentos
+            </div>
+
+            <div class="buttons">
+                <button id="boton-encriptar">Encriptar</button>
+                <button id="boton-desencriptar">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="container-2 panel-derecho">
+            <textarea id="salida-de-texto" readonly></textarea>
+            <img src="./assets/muneco.png" alt="Muñeco">
+            <p>Ningún mensaje fue encontrado</p>
+            <span>Ingresa el texto que desees encriptar o desencriptar.</span>
+            <button id="boton-copiar">Copiar</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Proyecto realizado por Jillsvick Kuri - G7 ONE</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
