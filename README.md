@@ -15,7 +15,7 @@ Este proyecto fue desarrollado como parte de la formación **Alura ONE G7**. El 
 - **Funcionalidades clave**:
   - Encriptar y desencriptar texto.
   - Copiar texto en la caja derecha.
-  - Funcionamiento responsivo, dependiendo del dispositivo, mnostrando u ocultando elementos.
+  - Funcionamiento responsivo, dependiendo del dispositivo, mostrando u ocultando elementos.
   
 
 ## Instrucciones de Uso
